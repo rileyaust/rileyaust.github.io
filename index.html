@@ -17,24 +17,26 @@
             color: #fff;
             padding: 1em 0;
             text-align: center;
-            position: relative;
-        }
-        .header-image {
-            width: 150px; /* Adjust the width as needed */
-            border-radius: 50%; /* Makes the image circular */
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
         }
         main {
             padding: 2em;
             max-width: 800px;
             margin: 0 auto;
+            text-align: center;
+        }
+        .profile-image {
+            width: 300px; /* Adjust the width as needed */
+            height: auto;
+            border-radius: 50%; /* Makes the image circular */
+            margin: 2em 0; /* Adds space around the image */
+        }
+        image {
+            width: 5px; /* Adjust the width as needed */
+            height: auto;
+            margin: 2em 0; /* Adds space around the image */
         }
         section {
             margin-bottom: 2em;
-            text-align: center;
         }
         h2 {
             color: #444;
@@ -54,33 +56,67 @@
 <header>
     <h1>Riley Aust</h1>
     <p>B.S. Computer Science | University of Michigan</p>
-    <img class="header-image" src="composite.jpg" alt="Riley Aust">
 </header>
 
 <main>
+    <img class="profile-image" src="composite.jpg" alt="Riley Aust">
+
     <section id="about">
         <h2>About Me</h2>
-        <p>Hello! I'm Riley Aust, a Computer Science student at the University of Michigan, Ann Arbor, graduating in the Class of 2024 with a GPA of 3.3. I have a strong passion for software development, project management, and leadership within academic and extracurricular settings.</p>
+        <p>Hello! I'm Riley Aust, a Computer Science graduate from the University of Michigan, Ann Arbor, Class of 2024. 
+            I am looking for a full time position working in a data analyst role and have created this website to display my experiences and passion to join the workforce.</p>
+    </section>
+
+    <section id="professional-experience">
+        <h2>Professional Experience</h2>
+        <h3>Project Management Intern at InBrace</h3>
+        <p>For a summer internship, I mediated communication between Raven 360 Consulting and InBrace to prepare <a href="https://learning.inbrace.com/">Learning.InBrace.com</a> launch. 
+            I beta tested, piloted, and launched InBrace.Learning.com for 450+ internal/external users. 
+            Additionally, I was responsible for managing all data related to the site to ensure collection and automation of previously manual processes. 
+            I presented the launch plan to executives and VPs to gain buy-in and approvals, identified software-related issues during the pilot, and created SOPs for Inside Sales, Training, and Clinical education to create enduring processes.</p>
+
     </section>
 
     <section id="academic-experience">
         <h2>Academic Experience</h2>
-        <p>B.S. Computer Science | University of Michigan, Ann Arbor</p>
-        <ul>
-            <li>Languages: C++, Java, JavaScript, Python, SQL, R</li>
-            <li>Classes Taken: Intro to Artificial Intelligence, Database Management Systems, Information Retrieval and Web Search, Software Engineering, Human-Centered Software Development, Intro to Computer Organization, Data Structures and Algorithms, Programming and Introductory Data Structures, Discrete Math, Foundations of Computer Science</li>
-            <li>Other Subjects: Multivariable and Vector Calculus, Calculus II, Statistics and Data Analysis, Intro to Astrophysics, Psychology as a Natural Science, Cognitive Psychology, 4 Semesters of Italian Language</li>
-            <li>Study Abroad: 4 weeks in Summer 2022 in Development and Programming of Serious Games, developed a serious game from scratch in Unity with 2 other students</li>
-        </ul>
+        <p>B.S. Computer Science | University of Michigan, Ann Arbor | 2020 - 2024 | 3.3 GPA</p>
+        <p>Coding Languages Proficient In: C++, Python, SQL, R, Java, JavaScript</p>
+        <p>Classes Taken: Intro to A.I., Database Management Systems, Information Retrieval and Web Search, Software Engineering, Intro to Computer Organization, Data Structures and Algorithms, Discrete Math</p>
+        <p>Other Subjects: Multivariable and Vector Calculus, Calculus II, Statistics and Data Analysis, Intro to Astrophysics, Psychology as a Natural Science, Cognitive Psychology, 4 Semesters of Italian Language</p>
     </section>
 
     <section id="projects">
         <h2>Projects</h2>
-        <h3>InBrace Learning Platform</h3>
-        <p>As a Project Management Intern at InBrace, I mediated communication between Raven 360 Consulting and InBrace to prepare Learning.InBrace.com launch. I beta tested, piloted, and launched InBrace.Learning.com for 450+ internal/external users. Additionally, I was responsible for managing all data related to the site to ensure collection and automation of previously manual processes. I presented the launch plan to executives and VPs to gain buy-in and approvals, identified software-related issues during the pilot, and created SOPs for Inside Sales, Training, and Clinical education to create enduring processes.</p>
 
         <h3>Why "X-Men: Days of Future Past" is a Statistical Anomaly on Letterboxd</h3>
-        <p></p>
+        <p>I have a large passion for film and with that, I use the app Letterboxd to often find new movies to watch. 
+            One great feature of the app is the way in which statistics about total watches and ratings are collected across all users. 
+            This made me curious to find that "X-Men: Days of Future Past", despite being the 5th entry and debuting 14 years after the original, is the most viewed entry in the "X-Men" franchise.
+        </p>
+        <p>
+            This led to me creating my own statistic to measure this kind of anomaly that was found in the X-Men franchise. 
+            The way in which I created this obscurity score was by this equation: 
+        </p>
+
+        <p>
+            number of viewers / expected viewers * entry number / relative viewership rank 
+        </p>
+
+        <p>
+            RVR is the ranking of the movie in relation to the ones released up to that point. 
+            I did it like this because I would expect that each entry in a franchise would have fewer views than the one before it.
+            For example, "X2" has 708k viewers with an expected value of 824k and an entry number of 2 and a relative rank of 2 as well, giving it a very normal score of 0.859.
+            I also calculated the expected value by taking the average in difference in views between each entry.
+        </p>
+        <p>
+            If you are interested in all of the data, here is a link to download the Excel sheet I used for the calculations.
+        </p>
+        <!-- Link to download the Excel sheet -->
+        <p><a href="franchiseOutliers.xlsx" download>Download Franchise Outliers Excel Sheet</a></p>
+        
+        <img class="image" src="movieGraph.png" alt="Movie Graphs" 
+        width="550" 
+        height="350">
 
         <h3>Serious Game Development</h3>
         <p>During my study abroad course in Summer 2022, I developed a serious game from scratch in Unity with 2 other students. This project enhanced my skills in game development, team collaboration, and programming.</p>
@@ -98,9 +134,10 @@
     <section id="contact">
         <h2>Contact Information</h2>
         <ul class="contact-info">
-            <li>Address: 62 Balboa Coves, Newport Beach, California</li>
-            <li>Phone: 949-375-2054</li>
-            <li>Email: aust.riley@gmail.com</li>
+            <li>62 Balboa Coves, Newport Beach, California 92663</li>
+            <li>949-375-2054</li>
+            <li>aust.riley@gmail.com</li>
+            <a href="https://www.linkedin.com/in/riley-aust-109ba2207/">LinkedIn</a>
         </ul>
     </section>
 </main>
